@@ -2,7 +2,7 @@
  * @Author: Chengsen Dong 1034029664@qq.com
  * @Date: 2023-07-26 11:05:45
  * @LastEditors: Chengsen Dong 1034029664@qq.com
- * @LastEditTime: 2023-07-26 11:13:45
+ * @LastEditTime: 2023-08-02 18:41:46
  * @FilePath: /lv_port_linux_frame_buffer/main.c
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -10,6 +10,7 @@
 #include "lvgl/demos/lv_demos.h"
 #include "lv_drivers/display/fbdev.h"
 #include "lv_drivers/indev/evdev.h"
+#include "ui/ui.h"
 #include <unistd.h>
 #include <pthread.h>
 #include <time.h>
@@ -59,8 +60,9 @@ int main(void)
 
 
     /*Create a Demo*/
-    lv_demo_widgets();
-
+    //lv_demo_widgets();
+    /*Create a heartrate Demo*/
+    ui_init();
     /*Handle LitlevGL tasks (tickless mode)*/
     while(1) {
         lv_timer_handler();
