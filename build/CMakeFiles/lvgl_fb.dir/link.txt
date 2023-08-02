@@ -1,0 +1,1 @@
+/usr/bin/cc -rdynamic CMakeFiles/lvgl_fb.dir/main.c.o CMakeFiles/lvgl_fb.dir/mouse_cursor_icon.c.o -o lvgl_fb  lib/liblvgl.a lvgl/liblvgl_examples.a lvgl/liblvgl_demos.a lib/liblv_drivers.a ui/libui.a lib/liblvgl.a 
